@@ -32,4 +32,8 @@ export class UserManagerComponent {
             this.users[index] = user;
         }
     }
+
+    onSubmit() {
+        return false;
+    }
 }
