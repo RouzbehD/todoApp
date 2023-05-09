@@ -1,0 +1,28 @@
+.done {
+    opacity: 0.7;
+}
+h1{
+    margin-top: 0;
+    color: #15aed5;
+    font-size: 2rem;
+    background-color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+:host{
+    background-color: black;
+    height: 100vh;
+    display: block;
+    padding: 5rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+}.todo-titel{
+ color: rgb(49, 51, 53);
+ font-weight: bold;
+ font-size: 1.2rem;
+}.todo-item{
+    width:50vw ;
+    display: flex;
+    justify-content: space-between;
+}

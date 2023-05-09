@@ -1,0 +1,17 @@
+<h1>ToDo APP</h1>
+<div class="flex gap-6 align-items-center">
+    <div class="p-inputgroup">
+        <input type="text" pInputText [formControl]="todoinput" (keyup.enter)="handleAddTodo()" />
+        <button pButton (click)="handleAddTodo()" label="Hinzufügen" icon="pi pi-plus" styleClass="'p-button-sm'"></button>
+    </div>
+    <p-knob type="value" [(ngModel)]="todoProgress" [readonly]="true" valueColor="SlateGray" rangeColor="MediumTurquoise"></p-knob>
+</div>
+<p-card *ngFor="let item of todos" [hidden]="item.removed" [class.bg-red]="item.completed">
+    <div class="todo-item flex gap-4 align-items-center">
+        <div class="flex gap-4">
+            <p-checkbox type="checked" [binary]="true" inputId="binary" (click)="handleItemChecked(item)"></p-checkbox>
+            <span class="todo-titel" [class.done]="item.completed">{{ item.title }}</span>
+        </div>
+        <p-button (click)="handleRemoveTodo(item)" icon="pi pi-trash" styleClass="p-button-raised p-button-danger"></p-button>
+    </div>
+</p-card>
